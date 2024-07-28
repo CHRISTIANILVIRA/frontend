@@ -1,0 +1,26 @@
+div#activar {
+    width: 375px;
+    border: solid 1px;
+    border-radius: 10px;
+    padding: 26px;
+    margin-left: calc(50% - 180px);
+    margin-top: 22px;
+    background: #E2C9F2;
+}
+
+.activar {
+    font-size: x-large;
+    background: #B294F2;
+    border-radius: 14px;
+    margin: 18px;
+    padding: 5px;
+    text-align: center;
+    font-weight: 500;
+}
+
+button.btn.btn-primary {
+    background-color: #B294F2;
+    margin-top: 16px;
+    color: black;
+    border-color: #B294F2;
+}

@@ -1,0 +1,36 @@
+img#logo {
+    width: 100px;
+    height: 100px;
+    margin-right: 30px;
+}
+
+.perfil{
+
+    color:black;
+}
+ .perfil:hover{
+    color: #8350F2;
+}
+
+.nav-link:hover{
+    color:#8350F2;
+}
+
+.active{
+    color: #8350f2 !important;
+}
+.text-black:hover{
+    color:#8350F2;
+}
+
+
+.dropitem:hover{
+    background-color:#8350F2;
+    color: #f7f8fc;
+    font-weight: 600;
+}
+
+.dropitem:active{
+    background-color:#8350F2;
+    font-weight: 600;
+}

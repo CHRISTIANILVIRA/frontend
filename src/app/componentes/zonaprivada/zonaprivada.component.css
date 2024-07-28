@@ -1,0 +1,100 @@
+/* Estilos existentes */
+div#mimenu {
+    width: 200px;
+    background: #B294F2;
+    height: 114vh;
+    float: left;
+    transition: transform 0.3s ease-in-out;
+    margin-top: -130px;
+}
+
+div#datosusuario img {
+    width: 150px;
+    border-radius: 50%;
+    height: 150px;
+    margin-left: calc(50% - 75px);
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.lblnombre {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.lblrol {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.opciones {
+    padding-left: 8px;
+}
+
+.itemmenu {
+    margin-bottom: 11px;
+    font-style: italic;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.itemmenu:hover {
+    margin-left: 10px;
+    background: #946ee4;
+}
+
+div#superior {
+    background: #E8CDF0 !important;
+    height: 40px !important;
+  }
+
+img {
+    width: 100px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    div#superior {
+        height: auto;
+        padding: 10px;
+    }
+
+    div#mimenu {
+        position: fixed;
+        width: 56%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        z-index: 1050;
+    }
+
+    div#mimenu.show {
+        transform: translateX(0);
+    }
+
+    .navbar-toggler {
+        display: block;
+    }
+
+    .content-pushed {
+        margin-left: 25%;
+        transition: margin-left 0.3s ease-in-out;
+    }
+
+    .btn-pushed {
+        margin-left: 25%;
+        transition: margin-left 0.3s ease-in-out;
+    }
+
+    
+}
+

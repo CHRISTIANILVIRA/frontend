@@ -1,0 +1,19 @@
+
+
+.titulos{
+    filter: drop-shadow( 3px 3px 8px #B294F2 );
+}
+
+.imgLogo{
+    display: block;
+    width: 250px;
+    height: 250px;
+    margin: auto;
+ }
+
+ .separacion{
+    height: 1.5px;
+    background-color: #B294F2;
+    margin-top: 50px;
+
+ }

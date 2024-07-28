@@ -1,0 +1,67 @@
+
+<app-header></app-header>
+
+<div class=" col-lg-5 container">
+  <div class="px-lg-6 pt-lg-5 pb-lg-1 p-5 d-flex align-items-center">
+    <a routerLink="/">  <img class="img-thumbnail" id="sumire" src="assets/IA-Sumire.jpeg" alt="Sumire"> </a>
+  </div>
+  <div class=" px-lg-5 py-lg-4 p-4">
+      <h1 class="font-weight-bold mb-4 text-center">Registrate</h1>
+
+
+      <div class="mb-5">
+        <div class="form-group mb-4">
+            <label for="nombre">Nombre</label>
+            <input type="text" class="form-control" [(ngModel)]="nombre" > 
+        </div>
+
+        <div class="col-mb-5">
+          <label for="Identificacion" class="form-label">Identificación</label>
+          <input type="text" class="form-control" id="Identificacion" [(ngModel)]="identificacion">
+      </div>
+
+      <div class="form-group mb-4">
+        <label for="exampleInputPassword1">Correo</label>
+        <input type="email" class="form-control" [(ngModel)]="email" > 
+    </div>
+
+
+   
+      <div class="col-mb-5">
+        <label for="password" class="form-label">Contraseña</label>
+        <input type="password" class="form-control" id="password" [(ngModel)]="password">
+    </div>
+
+    <div class="col-mb-5">
+        <label for="password" class="form-label">Confirmar Contraseña</label>
+        <input type="password" class="form-control" id="passwordconfirmar">
+    </div>
+   
+      
+
+    <div class="col-md-4">
+      <label for="Sexo" class="form-label">Sexo</label>
+      <select id="Sexo" class="form-select" [(ngModel)]="sexo">
+          <option selected></option>
+          <option>Masculino</option>
+          <option>Femenino</option>
+          <option>N/A</option>
+      </select>
+  </div>
+
+  <div class="col-md-6">
+    <label for="Telefono" class="form-label">Telefono</label>
+    <input type="text" class="form-control" id="Telefono" [(ngModel)]="telefono">
+</div>
+  
+    </div>
+    <div>
+      <button type="submit" class="btn  w-100" style="background-color:#B294F2" (click)="Registrar()">Registrarme</button>
+    </div>
+
+  </div>
+
+</div>
+
+
+<app-footer></app-footer>

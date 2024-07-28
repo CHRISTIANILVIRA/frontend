@@ -1,1 +1,62 @@
 /* You can add global styles to this file, and also import other style files */
+
+.ventana {
+  width: calc(100% - 200px);
+  position: absolute;
+  margin-left: 200px;
+  border: solid 2px #B294F2;
+  height: calc(114% - 0px); 
+  margin-top: -130px;  
+}
+
+.titulo {
+  background: plum;
+  height: 25px;
+  border-radius: 10px;
+  padding-left: 8px;
+  font-weight: 500;
+  font-style: italic;
+  margin-top: 3px;
+  margin-bottom: 40px;
+}
+
+.btnadd {
+  background: brown;
+  width: 39px;
+  text-align: center;
+  border-radius: 50px;
+  font-size: 23px;
+  font-weight: 700;
+  margin: 4px;
+  right: 0;
+  position: absolute;
+  top: -101px;
+  cursor: pointer;
+}
+
+body{
+   background: #f7f8fc;
+   padding-top: 130px; 
+}
+
+#page-container {
+position: relative;
+min-height: 100vh;
+}
+
+#content-wrap {
+padding-bottom: 12rem;
+}  
+
+.navbar {
+height:130px !important; /* aqui escoges el alto que necesites */
+}
+
+h1.tituloproductos {
+  text-align: center;
+  background: #E8CDF0;
+  margin: 32px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+

@@ -1,0 +1,51 @@
+<app-header></app-header>
+
+<div class=" col-lg-5 container">
+  <div class="px-lg-6 pt-lg-5 pb-lg-1 p-5 d-flex align-items-center">
+    <a routerLink="/">  <img class="img-thumbnail" id="sumire" src="assets/IA-Sumire.jpeg" alt="Sumire"> </a>
+  </div>
+  <div class=" px-lg-5 py-lg-4 p-4">
+      <h1 class="font-weight-bold mb-4 text-center">Inicia Sesión</h1>
+
+      <div class="mb-5">
+          <div class="form-group mb-4">
+              <label for="exampleInputEmail1">Usuario</label>
+              <input type="email" class="form-control bg-dark_ border-1" id="exampleInputEmail1"
+                  aria-describedby="emailHelp" placeholder="Ingresa tu usuario" [(ngModel)]="email">
+
+          </div>
+          <div class="form-group mb-4">
+              <label for="exampleInputPassword1">contraseña</label>
+              <input type="password" class="form-control bg-dark_ border-1 mb-1" id="exampleInputPassword1"
+                  placeholder="Ingresa tu contraseña" [(ngModel)]="password">
+              <a href="#" id="emailHelp" class="form-text text-decoration-none text-muted">¿Olvidaste la
+                  contraseña?</a>
+          </div>
+          <div class="form-check mb-4">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Recordar datos</label>
+          </div>
+          <button type="submit" class="btn w-100" style="background-color:#B294F2" (click)="login()">Ingresar</button>
+      </div>
+
+      <p class="font-weight-bold text-center">Registrate con:</p>
+
+      <div class="d-flex justify-content-around">
+          <button type="submit" class="btn btn-outline-light flex-grow-1"><img width="48" height="48"
+                  src="https://img.icons8.com/color/48/google-logo.png" alt="google-logo" /></button>
+          <button type="submit" class="btn btn-outline-light flex-grow-1"><img width="48" height="48"
+                  src="https://img.icons8.com/color/48/facebook-new.png" alt="facebook-new" /></button>
+          <button type="submit" class="btn btn-outline-light flex-grow-1"><img width="48" height="48"
+                  src="https://img.icons8.com/color/48/instagram-new.png" alt="icloud" /></button>
+
+      </div>
+  </div>
+  <div class="text-center px-lg-5 py-lg-4 p-4">
+      <p class="mb-0">¿Quieres registrarte? <a routerLink="/registro"
+              class="text-decoration-none font-weight-bold" style="color:#8350F2">Crea
+              una cuenta</a> </p>
+  </div>
+</div>
+
+
+<app-footer></app-footer>

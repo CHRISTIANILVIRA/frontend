@@ -1,0 +1,140 @@
+<app-header></app-header>
+
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3" *ngFor="let item of datos">
+            <div class="itemproducto" style="width: 16rem;" >
+                <img src="{{item.imagen}}" class="card-img-top" >
+                <div class="card-body">
+                  <h5 class="nombreprodcuto">{{item.nombre}}</h5>
+                  <p class="preciproducto">{{item.precio | currency}}</p>
+                  <a href="https://wa.me/+573106982856?text= Estoy interesad@ en este producto  {{item.nombre}}" class="btn btn-primary">Pedir</a>
+                  <div class="btn btn-primary" (click)="AbrirModal()">Info</div>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+
+  <div class="modal fade" id="Modalnuevo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" *ngFor="let item of datos">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Descripcion</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div class="modal-body">
+
+            <div class="modal-dialog modal-dialog-centered">
+                ...
+              </div>
+        </div>
+<div class="card-body">
+    <a href="https://wa.me/+573106982856?text= Estoy interesad@ en este producto  {{item.nombre}}" class="btn btn-primary">Pedir</a>
+</div>
+        
+      </div>
+    </div>
+  </div> -->
+  
+
+
+
+
+  <h1 class="text-center fst-italic titulo1"> {{nomCat()}} </h1>
+  <div class="container">
+      <div class="row">
+          <ng-container *ngFor="let item of productos">
+              <div class="col-md-3 col-sm-6 mb-4 d-flex align-items-stretch" *ngIf="item.estado==1 && (item.cod_cat == filtro || filtro == 'todos')"  (click)="producto=item">
+                  <div class="card border flex-fill p-3">
+                      <div data-bs-toggle="modal" data-bs-target="#exampleModal">
+                          <img src={{item.imagen}} class="card-img-top rounded-circle custom-img imagen" style="max-width:250 px; max-height: 250px;">
+                          <div class="card-body d-flex flex-column">
+                              <h5 class="card-title text-center"> {{item.nombre}}</h5>
+                              <p class="card-text flex-grow-1 text-center" style="font-size: 20px;">{{item.precio | currency}}</p>
+                          </div>
+                      </div>
+                      
+                      <div class="text-center mt-auto"><a target="_blank" href="https://wa.me/+573167184658?text= Hola, estoy interesad@ en este producto: {{item.nombre}}" style="color:black" class="btn ">Comprar</a></div>
+                  </div>
+              </div>
+          </ng-container >
+          
+      </div>
+  </div>
+  
+  
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content" style="background-color: #f7f8fc;">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">{{producto.nombre}}</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body " >
+            <p> {{producto.descripcion}}</p>
+            <p ><strong> Precio: </strong>{{producto.precio | currency}}</p>
+          </div>
+          <div class="modal-footer">
+              <div class="text-center mt-auto"><a target="_blank" href="https://wa.me/+573167184658?text= Hola, estoy interesad@ en este producto: {{producto.nombre}} " style="color:black" class="btn">Comprar</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- <h1 class="text-center fst-italic titulo1"> {{filtro == 'todos' ? 'Nuestros Productos' : filtro}} </h1>
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of productos">
+            <div class="col-md-3 col-sm-6 mb-4 d-flex align-items-stretch" *ngIf="item.estado==1 && (item.cod_cat == filtro || filtro == 'todos')"  (click)="producto=item">
+                <div class="card border flex-fill p-3">
+                    <div data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <img src={{item.imagen}} class="card-img-top rounded-circle custom-img imagen" style="max-width:250 px; max-height: 250px;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title text-center"> {{item.nombre}}</h5>
+                            <p class="card-text flex-grow-1 text-center" style="font-size: 20px;">{{item.precio | currency}}</p>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center mt-auto"><a target="_blank" href="https://wa.me/+573167184658?text= Hola, estoy interesad@ en este producto {{item.nombre}}" style="color:black" class="btn ">Comprar</a></div>
+                </div>
+            </div>
+        </ng-container >
+        
+    </div>
+</div>
+
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="background-color: #f7f8fc;">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">{{producto.nombre}}</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body " >
+          <p> {{producto.descripcion}}</p>
+          <p ><strong> Precio: </strong>{{producto.precio | currency}}</p>
+        </div>
+        <div class="modal-footer">
+            <div class="text-center mt-auto"><a target="_blank" href="https://wa.me/+573167184658?text= Hola, estoy interesad@ en este producto " style="color:black" class="btn">Comprar</a></div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+
+<app-footer></app-footer>
+
+
+
+
+
+
+
+
+
+  

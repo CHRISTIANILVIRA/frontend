@@ -1,0 +1,32 @@
+
+
+<div id="superior" class="d-flex justify-content-between align-items-center d-md-none">
+    <button class="btn btn-info" type="button" data-bs-toggle="offcanvas" 
+    data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBothOptions" (click)="toggleMenu()"> <span class="navbar-toggler-icon"></span></button>
+</div>
+
+<div id="mimenu" [ngClass]="{'show': menuOpen}">
+    <div id="superior" class="d-flex justify-content-between align-items-center d-md-none">
+        <button class="btn btn-info" type="button"
+          (click)="toggleMenu()"> <span class="navbar-toggler-icon"></span></button>
+    </div>
+    <div id="datosusuario">
+        <img *ngIf="rol == '1'" src="assets/IA-Sumire.jpeg">
+        <img *ngIf="rol == '2'" src="assets/avatar.png">
+        <div class="lblnombre">{{nombre}}</div>
+        <div class="lblrol">
+            <div *ngIf="rol == '1'">Administrador</div>
+            <div *ngIf="rol == '2'">Cliente</div>
+        </div>
+    </div>
+
+    <div class="opciones">
+        <div class="itemmenu" routerLink="/dashboard">Dashborad</div>
+        <div class="itemmenu" routerLink="/actualizardatosuser">Mis datos</div>
+        <div *ngIf="rol == '1'" class="itemmenu" routerLink="/usuarios">Usuarios</div>
+        <div *ngIf="rol == '1'" class="itemmenu" routerLink="/productos">Productos</div>
+        <div *ngIf="rol == '1'" class="itemmenu" routerLink="/categorias">Categorias</div>
+        <div *ngIf="rol == '1'" class="itemmenu" routerLink="/servicios">Servicios</div>
+        <div class="itemmenu" (click)="CerrarSession()">Salir</div>
+    </div>
+</div>

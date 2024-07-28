@@ -1,0 +1,65 @@
+
+<header class="container" >
+  <nav class="navbar navbar-light navbar-expand-lg fixed-top" style= "background-color: #E2C9F2"> 
+      <div class="container">
+          <!--  logo -->
+          <a class="navbar-brand " routerLink="/"><img id="logo" src="assets/Logo-sumire.png" alt="logo sumire"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- sider bar -->
+          <div class=" sidebar offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel">
+              <div class="offcanvas-header border-bottom">
+                  
+                  
+                  <button type="button" class="btn-close shadow-none text-reset" data-bs-dismiss="offcanvas"
+                      aria-label="Close"></button>
+              </div>
+              <!--   sider body -->
+              <div class="offcanvas-body d-flex flex-column flex-lg-row p-lg-0 p-4 fs-5">
+                  <ul
+                      class="navbar-nav justify-content-center align-items-center d-flex flex-column flex-lg-row flex-grow-1 pe-3">
+                      <li class="nav-item">
+                          <a class="nav-link " aria-current="page" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" >Inicio</a>
+                      </li>
+                      <li class="nav-item dropdown"  >
+                          <a class="nav-link d-inline pe-0" routerLinkActive="active" routerLink="/menu/todos"  >
+                              Menú
+                          </a>
+                          <a class="nav-link d-inline ps-0 dropdown-toggle" id="offcanvasNavbarDropdown"
+                              role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown"  style= "background-color: #B294F2; ">
+                              <li ><a class="dropdown-item dropitem" routerLink="/menu/ALFA">Alfajores</a></li>
+                              <li ><a class="dropdown-item dropitem" routerLink="/menu/BROW">Brownies</a></li>
+                              <li ><a class="dropdown-item dropitem" routerLink="/menu/FRES">Fresas</a></li>
+                              <li ><a class="dropdown-item dropitem" routerLink="/menu/TORT">Tortas</a></li>
+                          </ul>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" routerLink="/nosotros" routerLinkActive="active">Quienes Somos</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" routerLink="/contacto" routerLinkActive="active"  >Contacto</a>
+                      </li>
+
+
+                  </ul>
+                  <!--inicio de sesión y registro -->
+                  <div class="d-flex flex-column justify-content-center align-items-center flex-lg-row gap-3 ">
+                      <a routerLink="/login" routerLinkActive="active"  class=" px-3 py-1 text-decoration-none perfil " >Inicia sesión</a>
+                      <a routerLink="/registro"  routerLinkActive="active"  
+                          class=" px-3 py-1  text-decoration-none perfil "  >Registro</a>
+
+                  </div>
+              </div>
+          </div>
+      </div>
+
+  </nav>
+
+
+</header>
